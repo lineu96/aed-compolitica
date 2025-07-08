@@ -33,11 +33,9 @@ output:
 
 ---
 
-# {.tabset .tabset-fade .tabset-pills}
-
 ## Detalhes
 
-**Curso**: Fundamentos de Análise Exploratória de Dados - Conceitos e Aplicações
+**Curso**: Fundamentos de Análise Exploratória de Dados | Conceitos e Aplicações
 
 **Público Alvo**: Pesquisadores em Comunicação e Política com interesse em conhecer ou aprimorar os conhecimentos em técnicas de Análise Exploratória de Dados.
 
@@ -65,20 +63,21 @@ output:
 
 ## Programa e objetivos
 
-O objetivo do curso é capacitar os alunos em conceitos básicos de Análise Exploratória de Dados que permitam a interpretação crítica de resultados bem como a execução de procedimentos e análises exploratórias básicas dos tipos de variáveis mais comuns por meio de tabelas, gráficos e medidas resumo. 
+O objetivo do curso é capacitar os participantes em conceitos básicos de Análise Exploratória de Dados que permitam a interpretação crítica de resultados bem como a execução de procedimentos e análises exploratórias básicas dos tipos de variáveis mais comuns por meio de tabelas, gráficos e medidas resumo. 
 
 O curso compreende três encontros:
 
 **Encontro 1**
 
+- Apresentação do curso.
 - Introdução: Ideias iniciais, conceitos e motivações.
 - Dados e amostragem: Conjunto de dados, tipos de variáveis, fontes de dados, amostragem probabilística e não probabilística.
 - Gráficos e tabelas para variáveis qualitativas e quantitativas.
 
 **Encontro 2**
 
-- Resumos numéricos - medidas de posição e dispersão.
-- Análises bivariadas - explorando associações entre variáveis.
+- Resumos numéricos: Medidas de posição e dispersão.
+- Análises bivariadas: Explorando associações entre variáveis.
 
 **Encontro 3**
 
@@ -99,20 +98,6 @@ Playlist de Estatística Básica do Departamento de Estatística da UFPR: http:/
  - Bussab, WO; Morettin, PA. Estatística Básica. São Paulo: Editora Saraiva, 2017 (9ª Edição).
 
  - Magalhães, MN; Lima, ACP. Noções de Probabilidade e Estatística. São Paulo: EDUSP, 2015 (7ª edição).
-
- - Montgomery, DC; Runger, GC. Estatística aplicada e probabilidade para engenheiros. Rio de Janeiro: LTC Editora, 2012 (5ª Edição).
-
-### Referências complementares
- 
- - Andrade, DF; Ogliari, PJ. Estatística para as ciências agrárias e biológicas, com noções de experimentação. Florianópolis: Editora da UFSC, 2013.
-
- - Dantas, CAB. Probabilidade: um curso introdutório. São Paulo: EDUSP, 2008.
-
- - Morettin, LG. Estatística básica: probabilidade e inferência. São Paulo: Pearson, 2010.
-
- - Navidi, W. Probabilidade e estatística para ciências exatas. Porto Alegre: Bookman, 2012.
-
- - Spiegel, MR; Schiller, J; Srinivasan, A. Probabilidade e estatística. Porto Alegre: Bookman, 2013.
 
 ---
 

@@ -3,8 +3,8 @@ name: "AED - Compolítica"
 output_dir: "."
 
 navbar:
-  type: inverse
-  title: "Fundamentos de Análise Exploratória de Dados"
+  #type: inverse
+  title: "Análise Exploratória de Dados"
 
   left:
     - text: "Home"
@@ -50,11 +50,15 @@ navbar:
 
 output:
   html_document:
-    theme: default
+    theme: cosmo
     # default
     ## united
     # cosmo
     # yeti
+    
+    #spacelab
+    #cosmo
+    
     highlight: textmate
     #include:
     #  after_body: footer.html
