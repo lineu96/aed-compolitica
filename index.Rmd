@@ -1,0 +1,135 @@
+---
+title: Fundamentos de Análise Exploratória de Dados
+subtitle:  | 
+ | Conceitos e Aplicações
+ | 
+author: |
+ |
+ | Prof. Me. Lineu Alberto Cavazani de Freitas \vspace{-0.5cm}
+date: ""
+output:
+  html_document:                    
+    #toc: true                       
+    #toc_depth: 3                    
+    #toc_float:                      
+    #  collapsed: true
+    #  smooth_scroll: true
+    #number_sections: true           
+    #theme: default
+    #spacelab
+    #default,cerulean,journal,flatly,readable,spacelab,
+    #united,cosmo,lumen,paper,sandstone,simplex,yeti
+    
+    highlight: espresso
+    #default, tango, pygments, kate, monochrome, espresso, zenburn, haddock, and textmate
+    #css: styles.css                
+    fig_width: 7                    
+    fig_height: 6                   
+    fig_caption: true               
+    fig_align: 'center'
+    #code_folding: hide              
+#    keep_md: true
+---
+
+---
+
+# {.tabset .tabset-fade .tabset-pills}
+
+## Detalhes
+
+**Curso**: Fundamentos de Análise Exploratória de Dados - Conceitos e Aplicações
+
+**Público Alvo**: Pesquisadores em Comunicação e Política com interesse em conhecer ou aprimorar os conhecimentos em técnicas de Análise Exploratória de Dados.
+
+**Desejável**: R básico.
+
+ - No último encontro do curso será conduzida uma Análise Exploratória de Dados real utilizando a linguagem R e a IDE RStudio. 
+ - O não conhecimento da linguagem não inviabiliza a participação no curso. 
+ - O R será usado como ferramenta de reforço de aprendizado, porém não trata-se de um curso de R!
+
+**Professor responsável**: Lineu Alberto Cavazani de Freitas.
+
+**E-mail para contato**: lineuacf@gmail.com
+
+**Carga Horária**: 12 horas.
+
+**Dias e horários**:
+
+  - Dia, ##:## - ##:##, local.
+  - Dia, ##:## - ##:##, local.
+  - Dia, ##:## - ##:##, local.
+
+
+
+---
+
+## Programa e objetivos
+
+O objetivo do curso é capacitar os alunos em conceitos básicos de Análise Exploratória de Dados que permitam a interpretação crítica de resultados bem como a execução de procedimentos e análises exploratórias básicas dos tipos de variáveis mais comuns por meio de tabelas, gráficos e medidas resumo. 
+
+O curso compreende três encontros:
+
+**Encontro 1**
+
+- Introdução: Ideias iniciais, conceitos e motivações.
+- Dados e amostragem: Conjunto de dados, tipos de variáveis, fontes de dados, amostragem probabilística e não probabilística.
+- Gráficos e tabelas para variáveis qualitativas e quantitativas.
+
+**Encontro 2**
+
+- Resumos numéricos - medidas de posição e dispersão.
+- Análises bivariadas - explorando associações entre variáveis.
+
+**Encontro 3**
+
+- Outros tipos de gráfico.
+- Análise exploratória na prática: revisando conceitos e extraindo informações de um conjunto de dados real com R.
+- Considerações finais.
+
+---
+
+## Referências
+
+### Material de apoio
+
+Playlist de Estatística Básica do Departamento de Estatística da UFPR: http://www.leg.ufpr.br/~paulojus/estbas/.
+
+### Referências básicas
+
+ - Bussab, WO; Morettin, PA. Estatística Básica. São Paulo: Editora Saraiva, 2017 (9ª Edição).
+
+ - Magalhães, MN; Lima, ACP. Noções de Probabilidade e Estatística. São Paulo: EDUSP, 2015 (7ª edição).
+
+ - Montgomery, DC; Runger, GC. Estatística aplicada e probabilidade para engenheiros. Rio de Janeiro: LTC Editora, 2012 (5ª Edição).
+
+### Referências complementares
+ 
+ - Andrade, DF; Ogliari, PJ. Estatística para as ciências agrárias e biológicas, com noções de experimentação. Florianópolis: Editora da UFSC, 2013.
+
+ - Dantas, CAB. Probabilidade: um curso introdutório. São Paulo: EDUSP, 2008.
+
+ - Morettin, LG. Estatística básica: probabilidade e inferência. São Paulo: Pearson, 2010.
+
+ - Navidi, W. Probabilidade e estatística para ciências exatas. Porto Alegre: Bookman, 2012.
+
+ - Spiegel, MR; Schiller, J; Srinivasan, A. Probabilidade e estatística. Porto Alegre: Bookman, 2013.
+
+---
+
+# 
+
+<center>
+
+<table><tr>
+
+<td> <img src="img/ufpr-transparent-600px.png" alt="Drawing" style="width: 200px;"/> </td>
+
+<td> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </td>
+
+<td> <img src="img/compolitica.jpeg" alt="Drawing" style="width: 250px;"/> </td>
+
+
+</center>
+
+
+<div class="tocify-extend-page" data-unique="tocify-extend-page" style="height: 0;"></div>
