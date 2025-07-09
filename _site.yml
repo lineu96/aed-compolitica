@@ -25,7 +25,7 @@ navbar:
           
         - text: "Encontro 3"
           icon: fa-arrow-right
-          href: 
+          href: encontros/encontro3.html
 
     - text: "Exercícios"
       icon: fa-pen-to-square
@@ -38,11 +38,28 @@ navbar:
         - text: "Encontro 2"
           icon: fa-arrow-right
           href: praticas/exercicios-encontro2-solucao.pdf
-          
-        - text: "Encontro 3"
+
+    - text: "Outros materiais"
+      icon: fa-pen-to-square
+      menu:
+
+        - text: "Introdução ao R"
           icon: fa-arrow-right
-          href: 
-      
+          href: encontros/intro-R.pdf
+
+        - text: "Um curso de Estatística Básica"
+          icon: fa-arrow-right
+          href: https://lineu96.github.io/CE3012024/
+          
+        - text: "From Data to Viz"
+          icon: fa-arrow-right
+          href: https://www.data-to-viz.com/
+
+        - text: "The R Graph Gallery"
+          icon: fa-arrow-right
+          href: https://r-graph-gallery.com/
+
+          
   right:
     - text: "Lineu Alberto"
       icon: fa-user-tie 

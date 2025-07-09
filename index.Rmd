@@ -45,7 +45,7 @@ output:
  - O não conhecimento da linguagem não inviabiliza a participação no curso. 
  - O R será usado como ferramenta de reforço de aprendizado, porém não trata-se de um curso de R!
 
-**Professor responsável**: Lineu Alberto Cavazani de Freitas.
+**Professor responsável**: [Lineu Alberto Cavazani de Freitas](https://lineu96.github.io/).
 
 **E-mail para contato**: lineuacf@gmail.com
 
@@ -53,11 +53,9 @@ output:
 
 **Dias e horários**:
 
-  - Dia, ##:## - ##:##, local.
-  - Dia, ##:## - ##:##, local.
-  - Dia, ##:## - ##:##, local.
-
-
+  - 11/08/2025, ##:## - ##:##, remoto.
+  - 13/08/2025, ##:## - ##:##, remoto.
+  - 15/08/2025, ##:## - ##:##, remoto.
 
 ---
 
@@ -89,15 +87,15 @@ O curso compreende três encontros:
 
 ## Referências
 
-### Material de apoio
-
-Playlist de Estatística Básica do Departamento de Estatística da UFPR: http://www.leg.ufpr.br/~paulojus/estbas/.
-
 ### Referências básicas
 
  - Bussab, WO; Morettin, PA. Estatística Básica. São Paulo: Editora Saraiva, 2017 (9ª Edição).
 
  - Magalhães, MN; Lima, ACP. Noções de Probabilidade e Estatística. São Paulo: EDUSP, 2015 (7ª edição).
+
+### Material de apoio
+
+Playlist de Estatística Básica do Departamento de Estatística da UFPR: http://www.leg.ufpr.br/~paulojus/estbas/.
 
 ---
 
