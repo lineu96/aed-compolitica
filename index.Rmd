@@ -109,7 +109,7 @@ Playlist de Estatística Básica do Departamento de Estatística da UFPR: http:/
 
 <td> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </td>
 
-<td> <img src="img/compolitica.jpeg" alt="Drawing" style="width: 250px;"/> </td>
+<td> <img src="img/compolitica.jpeg" alt="Drawing" style="width: 140px;"/> </td>
 
 
 </center>
