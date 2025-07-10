@@ -41,11 +41,11 @@ output:
 
 **Desejável**: R básico.
 
- - No último encontro do curso será conduzida uma Análise Exploratória de Dados real utilizando a linguagem R e a IDE RStudio. 
+ - No último encontro do curso será conduzida uma Análise Exploratória de Dados de um conjunto de dados real utilizando a linguagem R e a IDE RStudio. 
  - O não conhecimento da linguagem não inviabiliza a participação no curso. 
  - O R será usado como ferramenta de reforço de aprendizado, porém não trata-se de um curso de R!
 
-**Professor responsável**: [Lineu Alberto Cavazani de Freitas](https://lineu96.github.io/).
+**Professor responsável**: **[Lineu Alberto Cavazani de Freitas](https://lineu96.github.io/)**.
 
 **E-mail para contato**: lineuacf@gmail.com
 

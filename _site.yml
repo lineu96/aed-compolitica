@@ -14,30 +14,54 @@ navbar:
     - text: "Aulas"
       icon: fa-person-chalkboard
       menu:
-
+        
+        - text: "---"
+         
         - text: "Encontro 1"
+        
+        - text: "Aula"
           icon: fa-arrow-right
           href: encontros/encontro1.pdf
 
-        - text: "Encontro 2"
-          icon: fa-arrow-right
-          href: encontros/encontro2.pdf
-          
-        - text: "Encontro 3"
-          icon: fa-arrow-right
-          href: encontros/encontro3.html
-
-    - text: "Exercícios"
-      icon: fa-pen-to-square
-      menu:
-
-        - text: "Encontro 1"
+        - text: "Exercícios"
           icon: fa-arrow-right
           href: praticas/exercicios-encontro1-solucao.pdf
 
+        - text: "---"
+
         - text: "Encontro 2"
+        
+        - text: "Aula"
+          icon: fa-arrow-right
+          href: encontros/encontro2.pdf
+
+        - text: "Exercícios"
           icon: fa-arrow-right
           href: praticas/exercicios-encontro2-solucao.pdf
+
+        - text: "---"
+         
+        - text: "Encontro 3"
+
+        - text: "From Data to Viz"
+          icon: fa-arrow-right
+          href: https://www.data-to-viz.com/
+
+        - text: "Formulário"
+          icon: fa-arrow-right
+          href: https://forms.gle/sVv2rq8zZrKyiDeJ6
+                  
+        - text: "Script"
+          icon: fa-arrow-right
+          href: encontros/encontro3.html
+
+        - text: "Dados"
+          icon: fa-arrow-right
+          href: 
+
+        - text: "---"
+
+
 
     - text: "Outros materiais"
       icon: fa-pen-to-square
@@ -51,10 +75,6 @@ navbar:
           icon: fa-arrow-right
           href: https://lineu96.github.io/CE3012024/
           
-        - text: "From Data to Viz"
-          icon: fa-arrow-right
-          href: https://www.data-to-viz.com/
-
         - text: "The R Graph Gallery"
           icon: fa-arrow-right
           href: https://r-graph-gallery.com/

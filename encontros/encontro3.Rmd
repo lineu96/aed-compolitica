@@ -61,7 +61,6 @@ names(dados) <- c("funcionario", "estado_civil",
 head(dados) # Exibe as primeiras 6 linhas do dataframe para uma inspeção inicial dos dados.
 
 #---
-
 # --- Seção 2: Análise Exploratória de Variáveis Qualitativas ---
 
 dados$estado_civil # Acessa a coluna 'estado_civil' para visualização.
@@ -88,10 +87,10 @@ sum(tabela_ec_freq_perc) # Soma os percentuais para verificar se o total é 100.
 
 ## 2.2. Gráficos para Variáveis Qualitativas
 
-### 2.2.1. Gráficos de Barras Simples (plot)
-plot(tabela_ec_freq_abs) # Gera um gráfico de barras simples usando a função 'plot' para frequências absolutas.
-plot(tabela_ec_freq_rel) # Gera um gráfico de barras simples para frequências relativas.
-plot(tabela_ec_freq_perc) # Gera um gráfico de barras simples para percentuais.
+### 2.2.1. Gráficos de Linhas Simples (plot)
+plot(tabela_ec_freq_abs) # Gera um gráfico de linhas simples usando a função 'plot' para frequências absolutas.
+plot(tabela_ec_freq_rel) # Gera um gráfico de linhas simples para frequências relativas.
+plot(tabela_ec_freq_perc) # Gera um gráfico de linhas simples para percentuais.
 
 ### 2.2.2. Gráficos de Barras (barplot)
 barplot(tabela_ec_freq_abs) # Gera um gráfico de barras usando a função 'barplot' para frequências absolutas.
@@ -103,12 +102,12 @@ barplot(tabela_ec_freq_abs, horiz=T) # Gera um gráfico de barras horizontais pa
 barplot(tabela_ec_freq_rel, horiz=T) # Gera um gráfico de barras horizontais para frequências relativas.
 barplot(tabela_ec_freq_perc, horiz=T) # Gera um gráfico de barras horizontais para percentuais.
 
-### 2.2.4. Gráficos de Pizza
-pie(tabela_ec_freq_abs) # Gera um gráfico de pizza para frequências absolutas.
-pie(tabela_ec_freq_rel) # Gera um gráfico de pizza para frequências relativas.
-pie(tabela_ec_freq_perc) # Gera um gráfico de pizza para percentuais.
+### 2.2.4. Gráficos de Setores
+pie(tabela_ec_freq_abs) # Gera um gráfico de setores para frequências absolutas.
+pie(tabela_ec_freq_rel) # Gera um gráfico de setores para frequências relativas.
+pie(tabela_ec_freq_perc) # Gera um gráfico de setores para percentuais.
 
-### 2.2.5. Gráficos de Barras Empilhadas (Usando "Truque")
+### 2.2.5. Gráficos de Barras Empilhadas (Usando um pequeno "Truque")
 # Cria uma tabela de frequência que, ao incluir uma coluna "vazia" (com um valor repetido para todas as observações),
 # força a função `barplot()` a criar um gráfico de barras empilhadas para uma única variável qualitativa.
 tabela_ec_dummy <- table(dados$estado_civil, rep('',36)) # 'rep('',36)' atua como uma segunda variável dummy.
@@ -149,8 +148,8 @@ breaks <- seq(4,24,2) # Define os pontos de corte (quebras) para as classes de i
 
 classes <- cut(dados$salario, # Divide a variável 'salario' em intervalos (classes).
                breaks = breaks, # Utiliza os pontos de corte definidos.
-               include.lowest = TRUE, # Define intervalos fechados à esquerda.
-               right = FALSE) # Define intervalos abertos à direita.
+               include.lowest = TRUE, # Inclui o valor mais baixo no primeiro intervalo.
+               right = FALSE) # Define que os intervalos são fechados à esquerda e abertos à direita.
 
 table(classes) # Gera uma tabela de frequência para as classes de salário.
 tabela_sal_classes_abs <- table(classes) # Armazena a tabela de frequência em 'tabela_sal_classes_abs'.
@@ -172,7 +171,7 @@ sum(tabela_sal_classes_perc) # Soma os percentuais para verificar se o total é 
 ### 3.2.1. Histograma e Densidade
 tabela_sal_classes_abs # Exibe a tabela de frequência das classes de salário.
 
-barplot(tabela_sal_classes_abs, space = 0) # Gera um gráfico de barras (histograma) das classes sem espaço entre as barras.
+barplot(tabela_sal_classes_abs, space = 0) # Gera um gráfico de barras sem espaço para as classes.
 hist(dados$salario) # Gera um histograma padrão da variável 'salario'.
 hist(dados$salario, probability = T) # Gera um histograma de densidade (com a área total igual a 1).
 
@@ -183,7 +182,7 @@ hist(dados$salario, probability = T) # Gera novamente o histograma de densidade.
 lines(densidade) # Adiciona a curva de densidade ao histograma existente.
 
 ### 3.2.2. Boxplot
-boxplot(dados$salario) # Gera um boxplot para a variável 'salario'.
+boxplot(dados$salario) # Gera um boxplot (diagrama de caixa) para a variável 'salario'.
 boxplot(dados$salario, horizontal = T) # Gera um boxplot horizontal para 'salario'.
 
 ## 3.3. Organização de Tabelas de Frequência para Variáveis Quantitativas
@@ -252,8 +251,8 @@ sd(dados$salario) # Calcula o desvio padrão do salário usando a função 'sd()
 ### 4.2.5. Coeficiente de Variação (CV)
 sd(dados$salario)/mean(dados$salario) # Calcula o coeficiente de variação.
 
-### 4.2.6. Escores Z (Padronização)
-(dados$salario - mean(dados$sal)/sd(dados$salario)) # Calcula os escores Z.
+### 4.2.6. Escores Z
+(dados$salario - mean(dados$sal))/sd(dados$salario) # Calcula os escores Z.
 scale(dados$salario) # Função mais eficiente para calcular os escores Z.
 escore <- scale(dados$salario) # Armazena os escores Z em 'escore'.
 mean(escore) # Calcula a média dos escores Z (deve ser aproximadamente 0).
@@ -318,10 +317,10 @@ barplot(t(tabela_contingencia_abs), beside = F, legend.text = T) # Gráfico de b
 barplot(tabela_contingencia_abs, beside = T, legend.text = T) # Gráfico de barras agrupadas para 'tabela_contingencia_abs' com legenda.
 barplot(t(tabela_contingencia_abs), beside = T, legend.text = T) # Gráfico de barras agrupadas com a tabela transposta.
 
-barplot(t(tabela_contingencia_linha), legend.text = T) # Gráfico de barras para proporções por linha.
+barplot(t(tabela_contingencia_linha), legend.text = T) # Gráfico de barras para proporções por linha (transposto para melhor visualização).
 barplot(tabela_contingencia_coluna, legend.text = T) # Gráfico de barras para proporções por coluna.
 
-## 5.3. Medida de associação para qualitativas: Qui-Quadrado
+## 5.3. Qui-Quadrado (associação entre qualitativas)
 
 tabela_contingencia_abs # Exibe a tabela de contingência original.
 tabela_contingencia_margens <- addmargins(tabela_contingencia_abs) # Tabela de contingência com as somas marginais.
@@ -332,9 +331,8 @@ tabela_contingencia_margens # Exibe a tabela com as margens.
 esperados <- (tabela_contingencia_margens[1:2,4] %*% t(tabela_contingencia_margens[3,1:3]))/sum(tabela_contingencia_abs)
 # Calcula a estatística Qui-quadrado (soma do quadrado da diferença entre observado e esperado, dividido pelo esperado).
 sum(((tabela_contingencia_abs - esperados)^2)/(esperados)) # Não é o teste qui-quadrado completo, mas o cálculo da estatística.
-# Para realizar o teste de qui-quadrado completo, use 'chisq.test(tabela_contingencia_abs)'.
 
-## 5.4. Correlação (Quantitativa vs. Quantitativa)
+## 5.4. Correlação e Regressão Linear Simples (Quantitativa vs. Quantitativa)
 
 cor(dados$salario, dados$anos) # Calcula a correlação de Pearson entre 'salario' e 'anos' (padrão).
 cor(dados$salario, dados$anos, method = "pearson") # Especifica o método de Pearson para correlação linear.
@@ -383,6 +381,7 @@ par(mfrow = c(1,1)) # Reseta o layout da área de plotagem para uma única figur
 plot(density(grau1$salario), xlim = c(0,30)) # Plota a densidade do "1o Grau" com limites x definidos.
 lines(density(grau2$salario), col= 2) # Adiciona a densidade do "2o Grau" (em vermelho) ao gráfico existente.
 lines(density(grau3$salario), col = 4) # Adiciona a densidade do "Superior" (em azul) ao gráfico existente.
+
 ```
 
 <div class="tocify-extend-page" data-unique="tocify-extend-page" style="height: 0;"></div>

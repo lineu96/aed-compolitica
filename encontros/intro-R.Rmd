@@ -1,13 +1,8 @@
 ---
 title: |
  |
- | \textbf{Fundamentos de Análise Exploratória de Dados}
- | Conceitos e Aplicações
+ | \textbf{Introdução ao R}
 
-subtitle:  |
- |
- | Encontro 3
- | Revisando conceitos e extraindo informações de um conjunto de dados com R
 author: Prof. Me. Lineu Alberto Cavazani de Freitas \vspace{-0.5cm}
 date: ""
 #institute: |
