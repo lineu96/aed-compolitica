@@ -370,6 +370,56 @@ de tabelas, gráficos e medidas.</p>
 em linguagem R buscar maneiras de customizar os gráficos e tabelas e
 explorar ferramentas mais modernas para fazer a mesma análise proposta.
 Sugere-se fortemente a exploração de pacotes como dplyr e ggplot2.</p>
+<hr />
+</div>
+<div id="dataset-v-dem" class="section level2">
+<h2>Dataset V-Dem</h2>
+<p>Nesta aula, vamos trabalhar com dados reais extraídos da versão 14 do
+dataset V-Dem (Varieties of Democracy). O V-Dem é uma iniciativa de
+pesquisa global que coleta informações sobre a democracia em
+praticamente todos os países do mundo desde 1789.</p>
+<p>Nossa análise exploratória será focada em um recorte específico deste
+conjunto de dados, obtido diretamente do site do projeto V-Dem.</p>
+<div id="recorte-e-fonte-dos-dados" class="section level3">
+<h3>Recorte e Fonte dos Dados</h3>
+<ul>
+<li><p>Fonte: <a href="https://www.v-dem.net/data/the-v-dem-dataset/country-year-v-dem-fullothers-v14/">Country-Year:
+V-Dem Full+Others version 14</a>.</p></li>
+<li><p>Recorte Temporal: Para garantir que nossa análise seja robusta e
+com poucos dados faltantes, trabalharemos com o período de 2000 a
+2020.</p></li>
+</ul>
+</div>
+<div id="variáveis-da-análise" class="section level3">
+<h3>Variáveis da Análise</h3>
+<p>Variáveis Qualitativas (Categóricas):</p>
+<ul>
+<li><p><code>tipo_regime</code>: Classifica o tipo de regime político de
+um país, de acordo com o projeto “Regimes of the World”. Níveis:
+Autocracia Fechada (código 0), Autocracia Eleitoral (código 1),
+Democracia Eleitoral (código 2), Democracia Liberal (código 3).</p></li>
+<li><p><code>regiao</code>: Agrupa os países em seis grandes regiões
+político-geográficas. Níveis: Europa Oriental e Ásia Central (código 1),
+América Latina e Caribe (código 2), Oriente Médio e Norte da África
+(código 3), África Subsaariana (código 4), Europa Ocidental e América do
+Norte (código 5), Ásia e Pacífico (código 6).</p></li>
+</ul>
+<p>Variáveis Quantitativas (Numéricas):</p>
+<ul>
+<li><p>dem_eleitoral: O Índice de Democracia Eleitoral. Foca na
+qualidade de eleições, liberdade de imprensa e de associação. Sua escala
+vai de 0 (baixo) a 1 (alto).</p></li>
+<li><p><code>dem_liberal</code>: O Índice de Democracia Liberal. Avalia
+a proteção de direitos, Estado de Direito e liberdades civis. Sua escala
+vai de 0 (baixo) a 1 (alto).</p></li>
+<li><p><code>indice_polity</code>: O Índice Polity. Mede a democracia em
+uma escala de -10 (autocracia completa) a +10 (democracia completa).
+Códigos especiais que representam períodos de interrupção ou transição
+foram removidos.</p></li>
+<li><p><code>populacao</code>: O número de habitantes de um
+país.</p></li>
+</ul>
+<hr />
 <pre class="r"><code>#-----------------------------------------------------------------------
 rm(list = ls()) # Limpa o ambiente de trabalho do R, removendo todos os objetos anteriores.
 #-----------------------------------------------------------------------
@@ -388,6 +438,7 @@ names(dados) &lt;- c(&quot;funcionario&quot;, &quot;estado_civil&quot;,
 head(dados) # Exibe as primeiras 6 linhas do dataframe para uma inspeção inicial dos dados.
 
 #---
+
 # --- Seção 2: Análise Exploratória de Variáveis Qualitativas ---
 
 dados$estado_civil # Acessa a coluna &#39;estado_civil&#39; para visualização.
@@ -434,7 +485,7 @@ pie(tabela_ec_freq_abs) # Gera um gráfico de pizza para frequências absolutas.
 pie(tabela_ec_freq_rel) # Gera um gráfico de pizza para frequências relativas.
 pie(tabela_ec_freq_perc) # Gera um gráfico de pizza para percentuais.
 
-### 2.2.5. Gráficos de Barras Empilhadas (Usando &quot;Truque&quot; Base R)
+### 2.2.5. Gráficos de Barras Empilhadas (Usando &quot;Truque&quot;)
 # Cria uma tabela de frequência que, ao incluir uma coluna &quot;vazia&quot; (com um valor repetido para todas as observações),
 # força a função `barplot()` a criar um gráfico de barras empilhadas para uma única variável qualitativa.
 tabela_ec_dummy &lt;- table(dados$estado_civil, rep(&#39;&#39;,36)) # &#39;rep(&#39;&#39;,36)&#39; atua como uma segunda variável dummy.
@@ -475,8 +526,8 @@ breaks &lt;- seq(4,24,2) # Define os pontos de corte (quebras) para as classes d
 
 classes &lt;- cut(dados$salario, # Divide a variável &#39;salario&#39; em intervalos (classes).
                breaks = breaks, # Utiliza os pontos de corte definidos.
-               include.lowest = TRUE, # Inclui o valor mais baixo no primeiro intervalo.
-               right = FALSE) # Define que os intervalos são fechados à esquerda e abertos à direita.
+               include.lowest = TRUE, # Define intervalos fechados à esquerda.
+               right = FALSE) # Define intervalos abertos à direita.
 
 table(classes) # Gera uma tabela de frequência para as classes de salário.
 tabela_sal_classes_abs &lt;- table(classes) # Armazena a tabela de frequência em &#39;tabela_sal_classes_abs&#39;.
@@ -509,7 +560,7 @@ hist(dados$salario, probability = T) # Gera novamente o histograma de densidade.
 lines(densidade) # Adiciona a curva de densidade ao histograma existente.
 
 ### 3.2.2. Boxplot
-boxplot(dados$salario) # Gera um boxplot (diagrama de caixa) para a variável &#39;salario&#39;.
+boxplot(dados$salario) # Gera um boxplot para a variável &#39;salario&#39;.
 boxplot(dados$salario, horizontal = T) # Gera um boxplot horizontal para &#39;salario&#39;.
 
 ## 3.3. Organização de Tabelas de Frequência para Variáveis Quantitativas
@@ -644,10 +695,10 @@ barplot(t(tabela_contingencia_abs), beside = F, legend.text = T) # Gráfico de b
 barplot(tabela_contingencia_abs, beside = T, legend.text = T) # Gráfico de barras agrupadas para &#39;tabela_contingencia_abs&#39; com legenda.
 barplot(t(tabela_contingencia_abs), beside = T, legend.text = T) # Gráfico de barras agrupadas com a tabela transposta.
 
-barplot(t(tabela_contingencia_linha), legend.text = T) # Gráfico de barras para proporções por linha (transposto para melhor visualização).
+barplot(t(tabela_contingencia_linha), legend.text = T) # Gráfico de barras para proporções por linha.
 barplot(tabela_contingencia_coluna, legend.text = T) # Gráfico de barras para proporções por coluna.
 
-## 5.3. Teste Qui-Quadrado (Estatística)
+## 5.3. Medida de associação para qualitativas: Qui-Quadrado
 
 tabela_contingencia_abs # Exibe a tabela de contingência original.
 tabela_contingencia_margens &lt;- addmargins(tabela_contingencia_abs) # Tabela de contingência com as somas marginais.
@@ -660,7 +711,7 @@ esperados &lt;- (tabela_contingencia_margens[1:2,4] %*% t(tabela_contingencia_ma
 sum(((tabela_contingencia_abs - esperados)^2)/(esperados)) # Não é o teste qui-quadrado completo, mas o cálculo da estatística.
 # Para realizar o teste de qui-quadrado completo, use &#39;chisq.test(tabela_contingencia_abs)&#39;.
 
-## 5.4. Correlação e Regressão Linear Simples (Quantitativa vs. Quantitativa)
+## 5.4. Correlação (Quantitativa vs. Quantitativa)
 
 cor(dados$salario, dados$anos) # Calcula a correlação de Pearson entre &#39;salario&#39; e &#39;anos&#39; (padrão).
 cor(dados$salario, dados$anos, method = &quot;pearson&quot;) # Especifica o método de Pearson para correlação linear.
@@ -711,6 +762,7 @@ lines(density(grau2$salario), col= 2) # Adiciona a densidade do &quot;2o Grau&qu
 lines(density(grau3$salario), col = 4) # Adiciona a densidade do &quot;Superior&quot; (em azul) ao gráfico existente.</code></pre>
 <div class="tocify-extend-page" data-unique="tocify-extend-page" style="height: 0;">
 
+</div>
 </div>
 </div>
 </div>
