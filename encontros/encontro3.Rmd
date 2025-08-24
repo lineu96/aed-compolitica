@@ -84,7 +84,7 @@ rm(list = ls()) # Limpa o ambiente de trabalho do R, removendo todos os objetos 
 # --- Seção 1: Configuração Inicial e Carregamento dos Dados ---
 
 # Leitura dos dados tratados=
-dados_aula <- read.csv("dados_vdem_aula.csv")
+dados_aula <- read.csv("https://raw.githubusercontent.com/lineu96/aed-compolitica/refs/heads/master/encontros/dados/dados_vdem_aula.csv")
 
 # Primeiras linhas
 head(dados_aula) # Exibe as primeiras 6 linhas do dataframe para uma inspeção inicial dos dados.
