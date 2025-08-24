@@ -35,7 +35,7 @@ output:
 
 ## Detalhes
 
-**Curso**: Fundamentos de Análise Exploratória de Dados | Conceitos e Aplicações
+**Curso**: [Fundamentos de Análise Exploratória de Dados | Conceitos e Aplicações](https://www.sympla.com.br/evento-online/escola-de-inverno-inct-dd-compolitica-2025/3048821)
 
 **Público Alvo**: Pesquisadores em Comunicação e Política com interesse em conhecer ou aprimorar os conhecimentos em técnicas de Análise Exploratória de Dados.
 
@@ -51,11 +51,9 @@ output:
 
 **Carga Horária**: 12 horas.
 
-**Dias e horários**:
+**Formato**: Curso remoto. Os inscritos receberão os links das salas em seus e-mails.
 
-  - 11/08/2025, ##:## - ##:##, remoto.
-  - 13/08/2025, ##:## - ##:##, remoto.
-  - 15/08/2025, ##:## - ##:##, remoto.
+**Dias e horários**: 25/08/2025, 27/08/2025 e 29/08/2025 das 18:30 até 22:00.
 
 ---
 

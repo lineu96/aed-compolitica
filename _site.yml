@@ -47,17 +47,13 @@ navbar:
           icon: fa-arrow-right
           href: https://www.data-to-viz.com/
 
-        - text: "Formulário"
-          icon: fa-arrow-right
-          href: https://forms.gle/sVv2rq8zZrKyiDeJ6
-                  
         - text: "Script"
           icon: fa-arrow-right
           href: encontros/encontro3.html
 
         - text: "Dados"
           icon: fa-arrow-right
-          href: 
+          href: encontros/dados/dados_vdem_aula.csv
 
         - text: "---"
 
